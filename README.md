@@ -13,9 +13,9 @@ This project is an attempt at making a machine-learning model that can predict w
 * maximum heart rate achieved
 
 # Results from 10 consecutive tests
-**Note: Tables are from same results, they are just put in different tables. Also, there was no 'random-state' value set for these tests.
+**Note: Tables are from same results, they are just put in different tables. Also, there was no 'random-state' value set for these tests.**
 
-**Data Recorded On: April 7, 2018
+*Data Recorded On: April 7, 2018*
 
 Predicting 0:
 
