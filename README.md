@@ -51,3 +51,9 @@ Predicting 1 (heart disease):
 # Requirements to Run Program
 * Install Python (version >= 2.7.14)
 * Install packages: numpy (version >= 1.14.2), pandas (version >= 0.21), scikit-learn (version >= 0.19.1), imbalanced-learn (version >= 0.3.3)
+
+# References
+*1. Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D.*
+*2. University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.*
+*3. University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D.*
+*4. V.A. Medical Center, Long Beach and Cleveland Clinic Foundation:Robert Detrano, M.D., Ph.D.*
