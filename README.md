@@ -17,7 +17,7 @@ This project is an attempt at making a machine-learning model that can predict w
 
 *Data Recorded On: April 7, 2018*
 
-Predicting 0:
+Predicting 0 (no heart disease):
 
 | Test ID | Precision | Recall | F1-Score | Support |
 | :---    | :---      | :---   | :---     | :---    |
@@ -32,7 +32,7 @@ Predicting 0:
 |9|0.86|0.90|0.88|20|
 |10|0.89|0.76|0.82|21|
 
-Predicting 1:
+Predicting 1 (heart disease):
 
 | Test ID | Precision | Recall | F1-Score | Support |
 | :---    | :---      | :---   | :---     | :---    |
