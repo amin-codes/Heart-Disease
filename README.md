@@ -12,9 +12,10 @@ This project is an attempt at making a machine-learning model that can predict w
 * do you smoke? (1 = yes; 0 = no)
 * maximum heart rate achieved
 
-#Results from 10 consecutive tests
-*Note: Tables are from same results, they are just put in different tables. Also, there was no 'random-state' value set for these tests.
-Data Recorded On: April 7, 2018
+# Results from 10 consecutive tests
+**Note: Tables are from same results, they are just put in different tables. Also, there was no 'random-state' value set for these tests.
+
+**Data Recorded On: April 7, 2018
 
 Predicting 0:
 
