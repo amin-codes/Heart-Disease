@@ -1,3 +1,5 @@
+#Made by: AKZOMBIE74 (Amin Zamani)
+#Data: April 7, 2018
 if __name__ == "__main__":
 
     #Importing some libraries
