@@ -1,4 +1,6 @@
 # :heart: Helper
+*Note: Only longBeachVA.csv is used for training this model*
+
 This project is an attempt at making a machine-learning model that can predict whether a person has heart disease or not without having to visit a doctor through the following inputs:
 * age (integer)
 * sex (1 = male; 0 = female)
