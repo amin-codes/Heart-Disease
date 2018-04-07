@@ -1,6 +1,3 @@
-# Heart-Disease Data
-Formatted data from http://archive.ics.uci.edu/ml/datasets/Heart+Disease
-
 # :heart: Helper
 This project is an attempt at making a machine-learning model that can predict whether a person has heart disease or not without having to visit a doctor through the following inputs:
 * age (integer)
@@ -57,3 +54,4 @@ Predicting 1 (heart disease):
 *2. University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.*
 *3. University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D.*
 *4. V.A. Medical Center, Long Beach and Cleveland Clinic Foundation:Robert Detrano, M.D., Ph.D.*
+Formatted data from: http://archive.ics.uci.edu/ml/datasets/Heart+Disease
