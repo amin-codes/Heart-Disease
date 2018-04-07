@@ -11,3 +11,7 @@ This project is an attempt at making a machine-learning model that can predict w
 * resting blood pressure (in mm Hg on admission to the hospital) (systolic) (If your blood pressure is 120/80, then enter 120)
 * do you smoke? (1 = yes; 0 = no)
 * maximum heart rate achieved
+
+# Requirements to Run Program
+* Install Python (version >= 2.7.14)
+* Install packages: numpy (version >= 1.14.2), pandas (version >= 0.21), scikit-learn (version >= 0.19.1), imbalanced-learn (version >= 0.3.3)
