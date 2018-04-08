@@ -48,6 +48,12 @@ Predicting 1 (heart disease):
 |10|0.75|0.88|0.81|17|
 
 [Link to table for averages from both tables](https://docs.google.com/document/d/1yBwZJ6u_dDgA1cqRK91_6qKzs4riiZbD3HULjpo708k/edit?usp=sharing)
+# About the Model
+The model's core is comprised of a [pipeline](http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html) that includes a [Kernel PCA](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html) followed by a [MLP Classifier](http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html).
+
+The MLP Classifier uses a LBFGS solver and a tanh activation. 
+
+...More to be added later
 # Requirements to Run Program
 * Install Python (version 2.7.14)
 * Install packages: numpy (version >= 1.14.2), pandas (version >= 0.21), scikit-learn (version >= 0.19.1), imbalanced-learn (version >= 0.3.3)
