@@ -55,7 +55,7 @@ if __name__ == "__main__":
 
 
     #Feature scaling
-    from sklearn.preprocessing import StandardScaler, LabelBinarizer
+    from sklearn.preprocessing import StandardScaler
     sc_X = StandardScaler()
     X_train = sc_X.fit_transform(X_train)
     X_test = sc_X.transform(X_test)
@@ -65,7 +65,6 @@ if __name__ == "__main__":
     import sklearn.pipeline
     from sklearn.neural_network import MLPClassifier
     from sklearn.decomposition import KernelPCA
-    from sklearn.preprocessing import Binarizer
     from imblearn.pipeline import make_pipeline
     
     select = sklearn.feature_selection.SelectPercentile(sklearn.feature_selection.f_classif)
