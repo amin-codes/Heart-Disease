@@ -49,7 +49,7 @@ Predicting 1 (heart disease):
 
 [Link to table for averages from both tables](https://docs.google.com/document/d/1yBwZJ6u_dDgA1cqRK91_6qKzs4riiZbD3HULjpo708k/edit?usp=sharing)
 # Requirements to Run Program
-* Install Python (version >= 2.7.14)
+* Install Python (version 2.7.14)
 * Install packages: numpy (version >= 1.14.2), pandas (version >= 0.21), scikit-learn (version >= 0.19.1), imbalanced-learn (version >= 0.3.3)
 
 # References
