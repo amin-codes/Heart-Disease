@@ -59,9 +59,6 @@ if __name__ == "__main__":
     sc_X = StandardScaler()
     X_train = sc_X.fit_transform(X_train)
     X_test = sc_X.transform(X_test)
-    label = LabelBinarizer()
-    Y_Train = label.fit_transform(Y_Train)
-    Y_Test = label.transform(Y_Test)
 
     
     #Using Pipeline
@@ -75,7 +72,7 @@ if __name__ == "__main__":
     clf = MLPClassifier(solver='lbfgs', learning_rate='constant', activation='tanh')
     kernel = KernelPCA()
     
-    pipeline = make_pipeline(Binarizer(threshold=0.0001), kernel, clf)
+    pipeline = make_pipeline(kernel, clf)
     pipeline.fit(X_train, Y_Train)
     
     #Testing
