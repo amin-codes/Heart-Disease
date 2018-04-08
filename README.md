@@ -9,6 +9,7 @@ This project is an attempt at making a machine-learning model that can predict w
 * relieved after rest? (1 = relieved after rest; 0 = otherwise) 
 * resting blood pressure (in mm Hg on admission to the hospital) (systolic) (If your blood pressure is 120/80, then enter 120)
 * do you smoke? (1 = yes; 0 = no)
+* has there been anyone in your family with heart disease? (1 = yes; 0 = no)
 * maximum heart rate achieved
 
 # Results from 10 consecutive tests
