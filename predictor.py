@@ -52,7 +52,11 @@ if __name__ == "__main__":
     smote_enn = SMOTEENN()
     X_resampled, y_resampled = smote_enn.fit_sample(X, Y)
     X_train, X_test, Y_Train, Y_Test = train_test_split(X_resampled, y_resampled, test_size=0.25)
-
+    
+    #Use actual data for tests and not the data created through imbalanced-learn
+    new = train_test_split(X, Y, test_size=0.25)
+    X_test = new[1]
+    Y_Test = new[3]
 
     #Feature scaling
     from sklearn.preprocessing import StandardScaler
