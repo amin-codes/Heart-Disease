@@ -15,7 +15,7 @@ This project is an attempt at making a machine-learning model that can predict w
 # Results from 10 consecutive tests
 **Note: Tables are from same tests, they are just put in different tables. Also, there was no 'random-state' value set for these tests.**
 
-*Data Recorded On: April 7, 2018*
+*Data Recorded On: April 7, 2018 (Outdated!)*
 
 Predicting 0 (no heart disease):
 
