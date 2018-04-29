@@ -20,7 +20,7 @@ if __name__ == "__main__":
             "painloc", #4
             "painexer", #5
             "relrest", #6
-            "resting-blood-pressure", #9
+            "systolic resting-blood-pressure", #9
             "smoke", #12
             "famhist", #17
             "max-heart-rate-achieved", #31
