@@ -36,7 +36,19 @@ if __name__ == "__main__":
     #Replace all 'heart-disease' values greater than 0 because my goal is not to classify the disease type
     for x,i in enumerate(Y):
         if i>0:Y[x]=1
-
+            
+    #Plotting Data
+    #import matplotlib.pyplot as plt
+    #myB = pd.DataFrame(data=X+Y, columns=column_names)
+    #axes = scatter_matrix(myB, alpha=0.2, figsize=(6, 6), diagonal='kde')
+    #corr = myB.corr().as_matrix()
+    #for ax in axes.ravel():
+    #    ax.set_xlabel(ax.get_xlabel(), fontsize=10, rotation=90)
+    #    ax.set_ylabel(ax.get_ylabel(), fontsize=10, rotation=0)
+    #for i, j in zip(*plt.np.triu_indices_from(axes, k=1)):
+    #    axes[i, j].annotate("%.3f" %corr[i,j], (0.8, 0.8), xycoords='axes fraction', ha='center', va='center')
+    #plt.show()        
+    
     #Taking care of missing data
     from sklearn.preprocessing import Imputer
     imputer = Imputer(missing_values=-9, strategy='most_frequent', axis=0)
