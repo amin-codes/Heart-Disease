@@ -3,7 +3,7 @@
 
 *Note: Only longBeachVA.csv is used for training this model*
 
-This project is an attempt at making a machine-learning model that can predict whether a person has heart disease or not without having to visit a doctor through the following inputs:
+This project is an attempt at making a machine-learning model that can predict if a person has heart disease without visiting a doctor with the following inputs:
 * age (integer)
 * sex (1 = male; 0 = female)
 * chest pain location (1 = substernal; 0 = otherwise) 
@@ -66,7 +66,22 @@ The pipeline uses the KPCA and MLP, in that order, to maximize the accuracy of t
 # Requirements to Run Program
 * Install Python (version 2.7.14)
 * Install packages: numpy (version >= 1.14.2), pandas (version >= 0.21), scikit-learn (version >= 0.19.1), imbalanced-learn (version >= 0.3.3)
+# Research
+The main issue is that some of the tests are expensive and some of the cheap tests are not very accurate. EKGs (electrocardiogram) cost approximately $50, exercise stress tests cost $175+, and imaging tests cost between $500 and $2,000.
 
+I wanted to create a machine learning model that could accurately predict if one has heart disease via, what I call, “absolute” inputs (inputs that have no uncertainty behind them).
+
+While searching the *University of California, Irvine Machine Learning Repository*, I found the Heart Disease Data Set that is used in training and testing the model.
+
+Approximately 610,000 people die of some type of heart disease every year in the US, and 47% of sudden cardiac deaths do not even occur in the hospital. The large proportion of sudden deaths occurring outside of hospitals means that people are not aware of their heart condition. People probably do not know about their heart condition because the cost of testing is too high and other low-cost tests could be misleading.
+# Testing on Myself and a Friend
+If the model outputs "0," then that means the user does not have heart disease, but if it outputs "1," then the user has heart disease.
+
+The array respectively represents the input of the user to the following: age, gender, pain location, pain exertion, relieved after rest, resting blood pressure, do they smoke?, do they have a family history of heart disease?, maximum systolic heart rate achieved.
+
+**These tests were performed April, 2018**
+![My heart disease predictions](master/My Test.png)
+![My friend's heart disease predictions](master/Friend Test.png)
 # References
 *1. Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D.*
 
