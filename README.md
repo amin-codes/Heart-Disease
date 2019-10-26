@@ -61,6 +61,8 @@ The model's core is comprised of a [pipeline](http://scikit-learn.org/stable/mod
 The KPCA is used as a transformer in the pipeline. It essentially helps cluster, or *transform*, the different components, which are the different questions asked, of the training data in a nonlinear fashion. This is useful because otherwise, the data would be scattered in a nonmeaningful way, which would lower the accuracy of the model's predictions.
 
 The MLP is used as a final estimator in the pipeline. It applies different weights to the different questions (let's refer to the questions as neurons), which means that some questions may be relied on more heavily as an indicator for heart disease. The MLP adjusts these weights based on the training data. One row of data from the training data is inputted to the MLP at a time, and the MLP compares its output with the expected output and calculates an error value, which is called stochastic gradient descent. This error value is then sent back, one neuron at a time, so that each neuron adjusts its weights as needed to minimize error, which is called backpropagation. The MLP repeats this learning process with each row of training data.
+
+The pipeline uses the KPCA and MLP, respectively, to maximize the accuracy of the machine-learning model's predictions.
 # Requirements to Run Program
 * Install Python (version 2.7.14)
 * Install packages: numpy (version >= 1.14.2), pandas (version >= 0.21), scikit-learn (version >= 0.19.1), imbalanced-learn (version >= 0.3.3)
