@@ -9,7 +9,7 @@ This project is an attempt at making a machine-learning model that can predict w
 * chest pain location (1 = substernal; 0 = otherwise) 
 * pain is provoked by exertion? (1 = provoked by exertion; 0 = otherwise)
 * relieved after rest? (1 = relieved after rest; 0 = otherwise) 
-* resting blood pressure (in mm Hg on admission to the hospital) (systolic) (If your blood pressure is 120/80, then enter 120)
+* resting blood pressure (in mm Hg on admission to the hospital) (systolic) (e.g., if your blood pressure is 120/80, then enter 120)
 * do you smoke? (1 = yes; 0 = no)
 * has there been anyone in your family with heart disease? (1 = yes; 0 = no)
 * maximum heart rate achieved
@@ -50,12 +50,17 @@ Predicting 1 (heart disease):
 |10|0.75|0.88|0.81|17|
 
 [Link to table for averages from both tables](https://docs.google.com/document/d/1yBwZJ6u_dDgA1cqRK91_6qKzs4riiZbD3HULjpo708k/edit?usp=sharing)
-# About the Model
-The model's core is comprised of a [pipeline](http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html) that includes a [Kernel PCA](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html) followed by a [MLP Classifier](http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html).
+# About the Data and Model
 
-The MLP Classifier uses a LBFGS solver and a tanh activation. 
+The data that I collected from the UC Irvine Machine Learning Repository was somewhat incomplete. In an attempt to fix this issue, I used an [imputer](https://scikit-learn.org/stable/modules/impute.html) to complete the data by inferring from the already collected data, which is sometimes better than outright throwing the incomplete data away.
 
-...More to be added later
+Also, the data had initially classified the types of heart disease on a scale of 0-4. 0 means heart disease is absent in the person. 1-4 means that there is some form of heart disease present in the person. I replaced values 1-4 with just 1 because my goal was not to distinguish between the different forms. I only wanted to predict if people had heart disease.
+
+The model's core is comprised of a [pipeline](http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html) that includes [Kernel Principal component analysis (KPCA)](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html) followed by a [Multilayer Perceptron Classifier (MLP)](http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html).
+
+The KPCA is used as a transformer in the pipeline. It essentially helps cluster, or *transform*, the different components, which are the different questions asked, of the training data in a nonlinear fashion. This is useful because otherwise, the data would be scattered in a nonmeaningful way, which would lower the accuracy of the model's predictions.
+
+The MLP is used as a final estimator in the pipeline. It applies different weights to the different questions (let's refer to the questions as neurons), which means that some questions may be relied on more heavily as an indicator for heart disease. The MLP adjusts these weights based on the training data. One row of data from the training data is inputted to the MLP at a time, and the MLP compares its output with the expected output and calculates an error value, which is called stochastic gradient descent. This error value is then sent back, one neuron at a time, so that each neuron adjusts its weights as needed to minimize error, which is called backpropagation. The MLP repeats this learning process with each row of training data.
 # Requirements to Run Program
 * Install Python (version 2.7.14)
 * Install packages: numpy (version >= 1.14.2), pandas (version >= 0.21), scikit-learn (version >= 0.19.1), imbalanced-learn (version >= 0.3.3)
@@ -68,5 +73,7 @@ The MLP Classifier uses a LBFGS solver and a tanh activation.
 *3. University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D.*
 
 *4. V.A. Medical Center, Long Beach and Cleveland Clinic Foundation:Robert Detrano, M.D., Ph.D.*
+
+*5. Scikit-learn: Machine Learning in Python, Pedregosa et al., JMLR 12, pp. 2825-2830, 2011.*
 
 Formatted data from: http://archive.ics.uci.edu/ml/datasets/Heart+Disease
