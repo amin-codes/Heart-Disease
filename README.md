@@ -1,4 +1,4 @@
-# :heart: Helper
+# Heart Helper :heart:
 *Made by Amin B. Z.*
 
 *Note: Only longBeachVA.csv is used for training this model*
@@ -52,9 +52,11 @@ Predicting 1 (heart disease):
 [Link to table for averages from both tables](https://docs.google.com/document/d/1yBwZJ6u_dDgA1cqRK91_6qKzs4riiZbD3HULjpo708k/edit?usp=sharing)
 # About the Data and Model
 
-The data that I collected from the UC Irvine Machine Learning Repository was somewhat incomplete. In an attempt to fix this issue, I used an [imputer](https://scikit-learn.org/stable/modules/impute.html) to complete the data by inferring from the already collected data, which is sometimes better than outright throwing the incomplete data away.
+The data that I collected from the UC Irvine Machine Learning Repository&#xb9; was somewhat incomplete. In an attempt to fix this issue, I used an [imputer](https://scikit-learn.org/stable/modules/impute.html) to complete the data by inferring from the already collected data, which is sometimes better than outright throwing the incomplete data away.
 
-Also, the data had initially classified the types of heart disease on a scale of 0-4. 0 means heart disease is absent in the person. 1-4 means that there is some form of heart disease present in the person. I replaced values 1-4 with just 1 because my goal was not to distinguish between the different forms. I only wanted to predict if people had heart disease.
+Also, the data had initially classified the types of heart disease on a scale of 0-4&#x00B2;. 0 means heart disease is absent in the person. 1-4 means that there is some form of heart disease present in the person. I replaced values 1-4 with just 1 because my goal was not to distinguish between the different forms. I only wanted to predict if people had heart disease.
+
+Sci-kit learn was the Python library that was used to create this model.&#x00B3;
 
 The model's core is comprised of a [pipeline](http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html) that includes [Kernel Principal component analysis (KPCA)](http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.KernelPCA.html) followed by a [Multilayer Perceptron Classifier (MLP)](http://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPClassifier.html).
 
@@ -67,30 +69,22 @@ The pipeline uses the KPCA and MLP, in that order, to maximize the accuracy of t
 * Install Python (version 2.7.14)
 * Install packages: numpy (version >= 1.14.2), pandas (version >= 0.21), scikit-learn (version >= 0.19.1), imbalanced-learn (version >= 0.3.3)
 # Research
-The main issue is that some of the tests are expensive and some of the cheap tests are not very accurate. EKGs (electrocardiogram) cost approximately $50, exercise stress tests cost $175+, and imaging tests cost between $500 and $2,000.
+The main issue is that some heart diagnosis tests are expensive and some of the cheap tests are not very accurate. EKGs (electrocardiogram) cost approximately $50, exercise stress tests cost $175+.&#x2074; Also, imaging tests cost between $500 and $2,000.&#x2075;
 
 I wanted to create a machine learning model that could accurately predict if one has heart disease via, what I call, “absolute” inputs (inputs that have no uncertainty behind them).
 
-While searching the *University of California, Irvine Machine Learning Repository*, I found the Heart Disease Data Set that is used in training and testing the model.
+While searching the *University of California, Irvine Machine Learning Repository*, I found the Heart Disease Data Set that is used in training and testing the model.&#x00B2;
 
-Approximately 610,000 people die of some type of heart disease every year in the US, and 47% of sudden cardiac deaths do not even occur in the hospital. The large proportion of sudden deaths occurring outside of hospitals means that people are not aware of their heart condition. People probably do not know about their heart condition because the cost of testing is too high and other low-cost tests could be misleading.
-# Testing on Myself and a Friend
-If the model outputs "0," then that means the user does not have heart disease, but if it outputs "1," then the user has heart disease.
-
-The array respectively represents the input of the user to the following: age, gender, pain location, pain exertion, relieved after rest, resting blood pressure, do they smoke?, do they have a family history of heart disease?, maximum systolic heart rate achieved.
-
-**These tests were performed April, 2018**
-![My heart disease predictions](master/My Test.png)
-![My friend's heart disease predictions](master/Friend Test.png)
+Approximately 610,000 people die of some type of heart disease every year in the US, and 47% of sudden cardiac deaths do not even occur in the hospital.&#x2076; The large proportion of sudden deaths occurring outside of hospitals means that people are not aware of their heart condition. People probably do not know about their heart condition because the cost of testing is too high and other low-cost tests could be misleading.
 # References
-*1. Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D.*
+*1. Dua, D. and Graff, C. (2017). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.*
 
-*2. University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.*
+*2. Janosi, A., Steinbrunn, W., Pfisterer, M., & Detrano, R. (1989).  Heart Disease Data Set [http://archive.ics.uci.edu/ml/datasets/Heart+Disease]. Budapest, Hungary: Hungarian Institute of Cardiology, Zurich, Switzerland: University Hospital of Zurich, Basel, Switzerland: University Hospital of Basel, Long Beach and Cleveland Clinic Foundation: V.A. Medical Center.*
 
-*3. University Hospital, Basel, Switzerland: Matthias Pfisterer, M.D.*
+*3. Scikit-learn: Machine Learning in Python, Pedregosa et al., JMLR 12, pp. 2825-2830, 2011.*
 
-*4. V.A. Medical Center, Long Beach and Cleveland Clinic Foundation:Robert Detrano, M.D., Ph.D.*
+*4. http://www.choosingwisely.org/patient-resources/ekgs-and-exercise-stress-tests/*
 
-*5. Scikit-learn: Machine Learning in Python, Pedregosa et al., JMLR 12, pp. 2825-2830, 2011.*
+*5. http://www.choosingwisely.org/patient-resources/imaging-tests-for-heart-disease/*
 
-Formatted data from: http://archive.ics.uci.edu/ml/datasets/Heart+Disease
+*6. https://www.cdc.gov/heartdisease/facts.htm*
